@@ -135,7 +135,7 @@ namespace PraktikumADO
                 string query = "UPDATE Matakuliah SET SKS=4 WHERE KodeMK='IF210101'";
                 cmd = new SqlCommand(query, conn);
                 int hasil = cmd.ExecuteNonQuery();
-                MessageBox.Show("Data berhasil diupdate : " + hasil);
+                MessageBox.Show("Data berhasil diupdate " + hasil);
                 conn.Close();
             }
             catch (Exception ex)
@@ -146,7 +146,21 @@ namespace PraktikumADO
 
         private void btnInsertProdi_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Koneksi();
+                conn.Open();
 
+                string query = "INSERT INTO ProgramStudi VALUES ('MI01', 'Manajemen Informatika')";
+                cmd = new SqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil ditambahkan " + hasil);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
