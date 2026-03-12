@@ -66,5 +66,10 @@ namespace PraktikumADO
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnHitungMk_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
