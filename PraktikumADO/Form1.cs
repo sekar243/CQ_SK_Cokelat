@@ -122,7 +122,12 @@ namespace PraktikumADO
             {
                 MessageBox.Show(ex.Message);
             }
+        
         }
+
+        private void btnUpdateMk_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
